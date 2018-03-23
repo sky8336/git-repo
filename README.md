@@ -12,3 +12,23 @@ that you can put anywhere in your path.
 * Overview: https://source.android.com/source/developing.html
 * Docs: https://source.android.com/source/using-repo.html
 * [Submitting patches](./SUBMITTING_PATCHES.md)
+
+# myrepo
+## how to install myrepo
+REPO_DIR=${HOME}/bin  
+mkdir $REPO_DIR  
+
+curl https://raw.githubusercontent.com/sky8336/git-repo/master/repo > $REPO_DIR/myrepo  
+chmod a+x $REPO_DIR/myrepo  
+
+echo "PATH=$PATH:$REPO_DIR" >> $HOME/.bashrc  
+echo "PATH=$PATH:$REPO_DIR" >> $HOME/.zshrc  
+
+using myrepo to avoid overwriting your repo in $REPO_DIR  
+
+## repo init & sync
+mkdir your-project-root-dir  
+cd your-project-root-dir  
+
+myrepo init -u http://github.com/sky8336/manifest --no-repo-verify  
+myrepo sync  
