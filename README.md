@@ -30,5 +30,9 @@ using myrepo to avoid overwriting your repo in $REPO_DIR
 mkdir your-project-root-dir  
 cd your-project-root-dir  
 
-myrepo init -u http://github.com/sky8336/manifest --no-repo-verify  
+myrepo init --no-repo-verify -u http://github.com/sky8336/manifest  
+myrepo sync  
+
+### vimcfg_bundle.xml
+myrepo init --no-repo-verify -u http://github.com/sky8336/manifest --manifest-name=vimcfg_bundle.xml  
 myrepo sync  
