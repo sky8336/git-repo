@@ -347,9 +347,9 @@ def _Init(args, gitc_init=False):
     dst = os.path.abspath(os.path.join(repodir, S_repo))
     _Clone(url, dst, opt.quiet, not opt.no_clone_bundle)
 
-    if can_verify and not opt.no_repo_verify:
-      rev = _Verify(dst, branch, opt.quiet)
-    else:
+#    if can_verify and not opt.no_repo_verify:
+#      rev = _Verify(dst, branch, opt.quiet)
+#    else:
       rev = 'refs/remotes/origin/%s^0' % branch
 
     _Checkout(dst, branch, rev, opt.quiet)
