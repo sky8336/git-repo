@@ -14,7 +14,7 @@ that you can put anywhere in your path.
 * [Submitting patches](./SUBMITTING_PATCHES.md)
 
 # myrepo
-## how to install myrepo
+## how to install myrepo [First time setup]
 REPO_DIR=${HOME}/bin  
 mkdir $REPO_DIR  
 
@@ -45,3 +45,20 @@ myrepo sync
 ### wowotechX.xml
 myrepo init --no-repo-verify -u http://github.com/sky8336/manifest -m wowotechX.xml  
 myrepo sync  
+
+## OpenEmbedded/Yocto Linux BSP for NXP Auto platforms
+### required tools
+sudo apt-get install chrpath texinfo  
+
+### Download the Yocto Project Environment into your directory:
+mkdir fsl-auto-yocto-bsp  
+cd fsl-auto-yocto-bsp  
+myrepo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master  
+myrepo sync  
+
+This will download the sources for the latest NXP Auto Linux BSP (from the branch alb/master),  
+structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.  
+
+Build an image ...:  
+refer to helpme/fsl_autoyocto_bsp_README  
+
